@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +18,92 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-A7-vwA">
+                                <rect key="frame" x="260" y="185" width="100" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ZqX-OL-dit"/>
+                                    <constraint firstAttribute="height" constant="30" id="ifv-oU-IEn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入日期格式：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nn-n2-vnC">
+                                <rect key="frame" x="124" y="191" width="136" height="19"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVK-GY-LDj">
+                                <rect key="frame" x="403" y="185" width="60" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.48809305079999998" green="0.52507504100000002" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Uqd-b3-cG5"/>
+                                </constraints>
+                                <state key="normal" title="确定">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="yIc-An-dyx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZZ-0i-Znq">
+                                <rect key="frame" x="260" y="265" width="100" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jhp-oU-52d"/>
+                                    <constraint firstAttribute="width" constant="100" id="vvO-jQ-WDl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vvO-jQ-WDl"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前时间：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSt-Xh-tI6">
+                                <rect key="frame" x="175" y="265" width="85" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t3g-A7-vwA" firstAttribute="centerY" secondItem="3nn-n2-vnC" secondAttribute="centerY" id="1PA-he-RmW"/>
+                            <constraint firstItem="7ZZ-0i-Znq" firstAttribute="leading" secondItem="NSt-Xh-tI6" secondAttribute="trailing" id="5bV-DG-G29"/>
+                            <constraint firstItem="RVK-GY-LDj" firstAttribute="leading" secondItem="t3g-A7-vwA" secondAttribute="trailing" constant="43" id="9bV-08-pt1"/>
+                            <constraint firstItem="t3g-A7-vwA" firstAttribute="leading" secondItem="3nn-n2-vnC" secondAttribute="trailing" id="XuA-EC-dw9"/>
+                            <constraint firstItem="t3g-A7-vwA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="10" id="Ygj-49-xpt"/>
+                            <constraint firstItem="t3g-A7-vwA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="Zp1-X5-ssE"/>
+                            <constraint firstItem="RVK-GY-LDj" firstAttribute="baseline" secondItem="3nn-n2-vnC" secondAttribute="baseline" id="a4F-WD-Kzv"/>
+                            <constraint firstItem="NSt-Xh-tI6" firstAttribute="trailing" secondItem="3nn-n2-vnC" secondAttribute="trailing" id="b2x-7T-p2T"/>
+                            <constraint firstItem="NSt-Xh-tI6" firstAttribute="baseline" secondItem="7ZZ-0i-Znq" secondAttribute="baseline" id="b7x-OY-XIm"/>
+                            <constraint firstItem="7ZZ-0i-Znq" firstAttribute="top" secondItem="t3g-A7-vwA" secondAttribute="bottom" constant="50" id="bHM-l1-7Q7"/>
+                            <constraint firstItem="t3g-A7-vwA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="10" id="caE-JW-l86"/>
+                            <constraint firstItem="7ZZ-0i-Znq" firstAttribute="leading" secondItem="t3g-A7-vwA" secondAttribute="leading" id="dBf-S7-rs7"/>
+                            <constraint firstItem="7ZZ-0i-Znq" firstAttribute="centerY" secondItem="NSt-Xh-tI6" secondAttribute="centerY" id="dPb-bd-sE4"/>
+                            <constraint firstItem="RVK-GY-LDj" firstAttribute="centerY" secondItem="t3g-A7-vwA" secondAttribute="centerY" id="kl5-15-XnQ"/>
+                            <constraint firstItem="RVK-GY-LDj" firstAttribute="firstBaseline" secondItem="3nn-n2-vnC" secondAttribute="baseline" id="sey-UB-d8H"/>
+                            <constraint firstItem="7ZZ-0i-Znq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="10" id="yeC-cl-DT8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="caE-JW-l86"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="currentlbl" destination="7ZZ-0i-Znq" id="yqz-g4-c9w"/>
+                        <outlet property="formatStr" destination="t3g-A7-vwA" id="2Ci-M4-ULK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
